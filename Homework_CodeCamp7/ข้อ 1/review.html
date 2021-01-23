@@ -5,10 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review</title>
 <style>
-    
+    table.a {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td.a , th.a {
+        border: 1px solid #943126;
+        text-align: left;
+        padding: 10px;
+    }
+    th.a {
+        font-size: 30px;
+        color: white;
+        background-color: #922B21;
+    }
+    tr.a:nth-child(even) {
+        background-color: #FADBD8;
+    }
+    td.a:nth-child(odd) {
+        font-size: 30px;
+    }
+    td.a:nth-child(even) {
+        font-size: 20px;
+    }
 </style>
 </head>
 <body>
-
+    <h1>1.1 CSS syntax ประกอบด้วย</h1>
+    <table class="a">
+        <tr class="a">
+            <th style="border-right: 1px solid white;" class="a">Syntax</th>
+            <th style="border-left: 1px solid white;" class="a">Description</th>
+        </tr>
+        <tr class="a">
+            <td class="a">1.Selector</td>
+            <td class="a">กำหนด HTML element ที่ต้องการปรับ style</td>
+        </tr>
+        <tr class="a">
+            <td class="a">2.Declaration</td>
+            <td class="a">
+                อยู่ถัดจาก Selector ประกอบด้วย Property name และ Value <br>
+                คั่นกันด้วยเครื่องหมาย : <br>
+                แต่ละ Declaration จะถูกคั่นด้วยเครื่องหมาย ; <br>
+                และ Declaration block จะถูกล้อมรอบด้วยวงเล็บปีกกา
+            </td>
+        </tr>
+        <tr class="a">
+            <td class="a">2.1 Property</td>
+            <td class="a">
+                รายละเอียดการกำหนด style เช่น สีตัวอักษร สีพื้น ขอบ ความกว้าง ความยาว เป็นต้น
+            </td>
+        </tr>
+        <tr class="a">
+            <td class="a">2.2 Value</td>
+            <td class="a">
+                ส่วนขยายที่ระบุุว่ากำหนด Property เป็นอย่างไร เช่น ให้สีตัวอักษรเป็นสีแดง 
+                สีพื้นเป็นสีเหลือง เป็นต้น
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
