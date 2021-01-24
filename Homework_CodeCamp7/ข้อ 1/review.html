@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review</title>
 <style>
+
     table.a {
         border-collapse: collapse;
-        width: 100%;
+        width: 95%;
     }
     td.a , th.a {
         border: 1px solid #943126;
@@ -28,10 +29,37 @@
     td.a:nth-child(even) {
         font-size: 20px;
     }
+
+    table.b {
+        border-collapse: collapse;
+        width: 95%;
+    }
+    td.b , th.b {
+        border: 1px solid #0B5345;
+        text-align: left;
+        padding: 10px;
+    }
+    th.b {
+        font-size: 30px;
+        color: white;
+        background-color: #145A32;
+    }
+    tr.b:nth-child(even) {
+        background-color: #A3E4D7;
+    }
+    tr.b:nth-child(odd) {
+        background-color: #117864;
+        color: white;
+    }
+    tr.b {
+        font-size: 20px;
+    }
+
 </style>
 </head>
 <body>
     <h1>1.1 CSS syntax ประกอบด้วย</h1>
+    <div style="display:flex;justify-content: center;">
     <table class="a">
         <tr class="a">
             <th style="border-right: 1px solid white;" class="a">Syntax</th>
@@ -64,5 +92,203 @@
             </td>
         </tr>
     </table>
+    </div>
+    <br>
+    <h1>1.2 การเขียน CSS มีกี่แบบอะไรบ้าง</h1>
+    <div style="display: flex; justify-content: center;">
+    <table class="b">
+        <tr class="b">
+            <th style="border-right:1px solid white;" class="b">Type</th>
+            <th style="border-right:1px solid white; border-left: 1px solid white;" class="b">Description</th>
+            <th style="border-right:1px solid white; border-left: 1px solid white;" class="b">Example</th>
+            <th style="border-left:1px solid white;" class="b">Result</th>
+        </tr>
+        <tr class="b">
+            <td style="font-size: 30px;" class="b">Inline<br><br>Style<br><br>Sheet</td>
+            <td class="b">
+                เขียน Style ภายใน Element นั้นๆเลย <br>
+                เหมาะสำหรับการเขียน Style เฉพาะ Element นั้นๆ <br>
+                โดยเขียนคำว่า "style" ภายใน &lt &gt ต่อท้าย <br>
+                ชื่อ element นั้นได้เลย
+            </td>
+            <td class="b">
+                &ltp <span style="color: red;">style</span>
+                ="color:#A569BD; font-size:30px"&gt
+                สวัสดีครับ &lt/p&gt
+            </td>
+            <td class="b">
+                <p style="color: #A569BD; font-size: 30px;">
+                    สวัสดีครับ
+                </p>
+            </td>
+        </tr>
+        <tr class="b">
+            <td style="font-size: 30px;" class="b">Embed<br><br>Style<br><br>Sheet</td>
+            <td class="b">
+                เขียน Style โดยตั้ง Element style ภายใน Element &lthead&gt <br>
+                และเขียน Declaration ด้านหลัง Element ซึ่งเราสามารถกำหนดเป็น <br>
+                class หรือ id ก็ได้ ซึ่งจะแสดงตัวอย่างไว้ในช่อง Example <br>
+                และนำ style นั้นมาใส่ใน Element ใน &ltbody&gt อีกที <br>
+                เหมาะสำหรับ การตั้ง style เดียวกัน ในหลายๆ Element
+            </td>
+            <td class="b">
+                กำหนด style ที่ได้ผลลัพธ์เดียวกัน ในแต่ละแบบ <br>
+                <u>แบบที่ 1</u> ไม่กำหนด class หรือ id ใดๆ
+                <p style="color: #F8C471;">
+                &lthead&gt <br>
+                &nbsp;&nbsp;&nbsp;&ltstyle&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                font-size:30px; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                color:#FADBD8; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                &nbsp;&nbsp;&nbsp;&lt/style&gt <br>
+                &lt/head&gt <br><br>
+                &ltbody&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ltp&gt
+                สวัสดีค่ะ&lt/p&gt <br>
+                &lt/body&gt
+                </p>
+                การกำหนดแบบนี้ หมายความว่า ทุก element &ltp&gt <br>
+                จะมี style เช่นนี้ทั้งหมด <br><br>
+                <u>แบบที่ 2</u> กำหนด id ใน style
+                <p style="color: #AED6F1;">
+                    &lthead&gt <br>
+                    &nbsp;&nbsp;&nbsp;&ltstyle&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <span style="color: #F8C471;">#abc</span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    font-size:30px; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:#FADBD8; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                    &nbsp;&nbsp;&nbsp;&lt/style&gt <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ltp 
+                    <span style="color: #F8C471;">id="abc"&gt</span>
+                    สวัสดีค่ะ&lt/p&gt <br>
+                    &lt/body&gt
+                </p>
+                การกำหนด id จะทำให้ style ปรากฏแต่เฉพาะ element ที่กำหนด id เท่านั้น
+                <br><br>
+                <u>แบบที่ 3</u> กำหนด class ใน style
+                <p style="color: #F8C471;">
+                    &lthead&gt <br>
+                    &nbsp;&nbsp;&nbsp;&ltstyle&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <span style="color: #AED6F1;">.abc</span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    font-size:30px; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:#FADBD8; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                    &nbsp;&nbsp;&nbsp;&lt/style&gt <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ltp 
+                    <span style="color: #AED6F1;">class="abc"&gt</span>
+                    สวัสดีค่ะ&lt/p&gt <br>
+                    &lt/body&gt
+                </p>
+                การกำหนด class จะทำให้ style ปรากฏแต่เฉพาะ element ที่กำหนด class เท่านั้น
+            </td>
+            <td class="b">
+                <p style="font-size: 30px; color: #FADBD8;">สวัสดีค่ะ</p>
+            </td>
+        </tr>
+        <tr class="b">
+            <td style="font-size: 30px;" class="b">External<br><br>Style<br><br>Sheet</td>
+            <td class="b">
+                มีจุดประสงค์แบบเดียวกับ Embed Style Sheet แต่เขียนแยก file เป็น <br>
+                file ที่มีนามสกุล .css และถูกเรียกเข้ามาใน file.html โดยคำสั่ง &ltlink&gt <br>
+                ภายใน &lthead&gt แทน &ltstyle&gt ใช้ในกรณีที่เขียนหน้าเว็บหลายๆหน้า แต่ละหน้า <br>
+                มี layout แบบเดียวกัน เพื่อลดการพิมพ์ style ซ้ำหลายๆรอบ
+            </td>
+            <td class="b">
+                สร้าง file.css กำหนดชื่อ style.css จากนั้น กำหนด Slector และ Declaration <br>
+                ใน style.css ได้เลย จะแสดงตามตัวอย่าง
+                <u>แบบที่ 1</u> ไม่กำหนด class หรือ id ใดๆ
+                <p style="color: #1B4F72;">
+                <span style="font-size: 30px; color: #4A235A;">style.css</span> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                font-size:30px; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                color:#76448A ; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                ------------------------- <br>
+                <span style="font-size: 30px; color: #4A235A;">HTML file</span> <br>
+                &lthead&gt <br>
+                <span style="color: tomato;">
+                    &ltlink rel="stylesheet" href="./style.css"&gt
+                </span> <br>
+                &lt/head&gt <br>
+                &ltbody&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ltp&gt
+                Hello&lt/p&gt <br>
+                &lt/body&gt
+                </p>
+                การกำหนดแบบนี้ หมายความว่า ทุก element &ltp&gt <br>
+                จะมี style เช่นนี้ทั้งหมด <br><br>
+                <u>แบบที่ 2</u> กำหนด id ใน style
+                <p style="color: #C0392B;">
+                    <span style="font-size: 30px; color: #E67E22;">style.css</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <span style="color: #1B4F72;">#abc</span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    font-size:30px; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:#76448A ; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                    ------------------------- <br>
+                    <span style="font-size: 30px; color: #E67E22;">HTML file</span> <br>
+                    &lthead&gt <br>
+                    <span style="color: #283747 ">
+                        &ltlink rel="stylesheet" href="./style.css"&gt <br>
+                    </span>
+                    &lt/head&gt <br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &ltp <span style="color: #1B4F72;">id="abc"</span>&gt
+                    Hello&lt/p&gt <br>
+                    &lt/body&gt
+                </p>
+                การกำหนด id จะทำให้ style ปรากฏแต่เฉพาะ element ที่กำหนด id เท่านั้น
+                <br><br>
+                <u>แบบที่ 3</u> กำหนด class ใน style
+                <p style="color: #1B4F72;">
+                    <span style="font-size: 30px; color: #4A235A;">style.css</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <span style="color:#A04000">.abc</span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    font-size:30px; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:#76448A ; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                    ------------------------- <br>
+                    <span style="font-size: 30px; color: #4A235A;">HTML file</span> <br>
+                    &lthead&gt <br>
+                    <span style="color: tomato;">
+                        &ltlink rel="stylesheet" href="./style.css"&gt
+                    </span> <br>
+                    &lt/head&gt <br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ltp 
+                    <span style="color: tomato;">class="abc"</span>&gt
+                    Hello&lt/p&gt <br>
+                    &lt/body&gt
+                </p>
+                การกำหนด class จะทำให้ style ปรากฏแต่เฉพาะ element ที่กำหนด class เท่านั้น
+            </td>
+            <td class="b">
+                <p style="font-size: 30px; color: #76448A ;">
+                    Hello
+                </p>
+            </td>
+        </tr>
+    </table>
+    </div>
 </body>
 </html>
