@@ -55,6 +55,30 @@
         font-size: 20px;
     }
 
+    table.c {
+        border-collapse: collapse;
+        width: 95%;
+    }
+    td.c , th.c {
+        border: 1px solid #922B21;
+        text-align: left;
+        padding: 10px;
+    }
+    th.c {
+        font-size: 30px;
+        color: white;
+        background-color: #9A7D0A ;
+    }
+    tr.c:nth-child(even) {
+        background-color: #FCF3CF;
+    }
+    tr.c:nth-child(odd) {
+        background-color: #F7DC6F ;
+    }
+    tr.c {
+        font-size: 20px;
+    }
+
 </style>
 </head>
 <body>
@@ -95,12 +119,15 @@
     </div>
     <br>
     <h1>1.2 การเขียน CSS มีกี่แบบอะไรบ้าง</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ การเขียน CSS มี 3 แบบ ดังนี้</h2>
     <div style="display: flex; justify-content: center;">
     <table class="b">
         <tr class="b">
             <th style="border-right:1px solid white;" class="b">Type</th>
-            <th style="border-right:1px solid white; border-left: 1px solid white;" class="b">Description</th>
-            <th style="border-right:1px solid white; border-left: 1px solid white;" class="b">Example</th>
+            <th style="border-right:1px solid white; border-left: 1px solid white;" 
+            class="b">Description</th>
+            <th style="border-right:1px solid white; border-left: 1px solid white;" 
+            class="b">Code Example</th>
             <th style="border-left:1px solid white;" class="b">Result</th>
         </tr>
         <tr class="b">
@@ -271,7 +298,7 @@
                     <span style="font-size: 30px; color: #4A235A;">HTML file</span> <br>
                     &lthead&gt <br>
                     <span style="color: tomato;">
-                        &ltlink rel="stylesheet" href="./style.css"&gt
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ltlink rel="stylesheet" href="./style.css"&gt
                     </span> <br>
                     &lt/head&gt <br>
                     &ltbody&gt <br>
@@ -289,6 +316,177 @@
             </td>
         </tr>
     </table>
+    </div> <br>
+    <h1>1.3 selector มีกี่แบบอะไรบ้าง</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ selector มี 5 แบบ ดังนี้</h2>
+    <div style="display: flex; justify-content: center;">
+        <table class="c">
+            <tr class="c">
+                <th class="c">Slector</th>
+                <th class="c">Description</th>
+                <th class="c">Code Example</th>
+                <th class="c">Result</th>
+            </tr>
+            <tr class="c">
+                <td style="font-size: 30px;" class="c">Element Sector</td>
+                <td class="c">
+                    คือ กำหนด Style ลงใน Element นั้น <br>
+                    เช่น กำหนด style ใน element &ltp&gt <br>
+                    ให้ตัวอักษรเป็นสีแดง และมีขนาดตัวอักษร 30px <br>
+                    ก็หมายความว่า ทุกๆตัวอักษรที่อยู่ใน <br>
+                    &ltp&gt จะมีสีแดง และมีขนาด 30px ทั้งหมด
+                </td>
+                <td style="color: #1F618D;" class="c">
+                    &lthead&gt <br>
+                    &ltstyle&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    p { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:red; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    font-size:30px;<br>
+                    &lt/style&gt <br>
+                    &lt/head&gt <br><br>
+
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltp&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Hello <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt/p&gt <br>
+                    &lt/body&gt
+                </td>
+                <td class="c">
+                    <p style="color: red; font-size: 30px;">
+                        Hello
+                    </p>
+                </td>
+            </tr>
+            <tr class="c">
+                <td style="font-size: 30px;" class="c">id Selector</td>
+                <td class="c">
+                    กำหนด style เป็น id โดยใช้ <br>
+                    เครื่องหมาย # ตามด้วย id name <br>
+                    ที่เรากำหนด และหากต้องการ element <br>
+                    นั้น แสดง style จะต้องใส่ id name <br>
+                    ลงใน element นั่นเสียก่อน
+                </td>
+                <td style="color: #8E44AD ;" class="c">
+                    &lthead&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: red;">#abc</span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:red; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    font-size:30px; <br>
+                    } <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltp <span style="color: red;">id="abc</span>&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Hello <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt/p&gt <br>
+                    &lt/body&gt
+                </td>
+                <td class="c">
+                    <p style="color: red ; font-size: 30px;">
+                        Hello
+                    </p>
+                </td>
+            </tr>
+            <tr class="c">
+                <td style="font-size: 30px;" class="c">class Selector</td>
+                <td class="c">	กำหนด style เป็น class โดยใช้
+                    เครื่องหมาย . ตามด้วย class name <br>
+                    ที่เรากำหนด และหากต้องการ element <br>
+                    นั้น แสดง style จะต้องใส่ class name <br>
+                    ลงใน element นั่นเสียก่อน</td>
+                <td style="color: #1F618D;" class="c">
+                    &lthead&gt <br>
+                    &ltstyle&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: red;">.abc</span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:red; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    font-size:30px <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                    &lt/style&gt <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltp <span style="color: red;">class="abc"</span>&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Hello <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt/p&gt <br>
+                    &lt/body&gt
+                </td>
+                <td class="c">
+                    <p style="color: red; font-size: 30px;">
+                        Hello
+                    </p>
+                </td>
+            </tr>
+            <tr class="c">
+                <td style="font-size: 30px;" class="c">Universal Selector</td>
+                <td class="c">
+                    กำหนด style ทุก element ให้เป็นในแบบเดียวกัน <br>
+                    โดยใช้สัญลักษณ์ *
+                </td>
+                <td style="color: #8E44AD;" class="c">
+                    &lthead&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: red;">*</span> {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:red; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lth1&gt Hello &lt/h1&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lth2&gt Hello &lt/h2&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltp&gt Heloo &lt/p&gt <br>
+                    &lt/body&gt
+                </td>
+                <td class="c">
+                    <h1 style="color: red;">Hello</h1> <br>
+                    <h2 style="color: red;">Hello</h2> <br>
+                    <p style="color: red;">Hello</p> <br>
+                </td>
+            </tr>
+            <tr class="c">
+                <td style="font-size: 30px;" class="c">Group Selector</td>
+                <td class="c">ปรับ Style เดียวกันใน element หลายๆตัว</td>
+                <td style="color: #1F618D;" class="c">
+                    &lthead&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: red;">h1,h2,p</span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    color:red; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lth1&gtHello&lt/h1&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lth2&gtHello&lt/h2&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltp&gtHello&lt/p&gt <br>
+                    &lt/body&gt
+                </td>
+                <td class="c">
+                    <h1 style="color: red;">Hello</h1> <br>
+                    <h2 style="color: red;">Hello</h2> <br>
+                    <p style="color: red;">Hello</p> <br>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
