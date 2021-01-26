@@ -79,6 +79,30 @@
         font-size: 20px;
     }
 
+    table.d {
+        border-collapse: collapse;
+        width: 95%;
+    }
+    td.d , th.d {
+        border: 1px solid #4A235A;
+        text-align: left;
+        padding: 10px;
+    }
+    th.d {
+        font-size: 30px;
+        background-color: #76448A ;
+        color: white;
+    }
+    tr.d:nth-child(even) {
+        background-color: #AF7AC5;
+        color: white;
+    }
+    tr.d:nth-child(odd) {
+        background-color: #D7BDE2 ;
+    }
+    tr.d {
+        font-size: 20px;
+    }
 </style>
 </head>
 <body>
@@ -465,11 +489,13 @@
                 <td class="c">ปรับ Style เดียวกันใน element หลายๆตัว</td>
                 <td style="color: #1F618D;" class="c">
                     &lthead&gt <br>
+                    &ltstyle&gt <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span style="color: red;">h1,h2,p</span> { <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     color:red; <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                    &lt/style&gt <br>
                     &lt/head&gt <br><br>
                     &ltbody&gt <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -487,6 +513,166 @@
                 </td>
             </tr>
         </table>
-    </div>
+    </div><br>
+    <h1>1.4 combinator มีกี่แบบอะไรบ้าง</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ combinator มี 4 แบบ ดังนี้</h2>
+    <div style="display: flex; justify-content: center;">
+    <table class="d">
+        <tr class="d">
+            <th class="d">Combinator</th>
+            <th class="d">Description</th>
+            <th class="d">Code Example</th>
+            <th class="d">Result</th>
+        </tr>
+        <tr class="d">
+            <td style="font-size: 30px;" class="d">Decendant Selector</th>
+            <td class="d">
+                การกำหนด style element ลูก ด้วยการเว้นวรรค (กด space bar) <br>
+                จาก element แม่
+            </th>
+            <td class="d">
+                <p  style="color:#D4E6F1 ">
+                &lthead&gt <br>
+                &ltstyle&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="color: white;">div p</span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                background-color:white; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>
+                &lt/style&gt <br>
+                &lt/head&gt <br><br>
+                &ltbody&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltdiv&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltp&gtHello&lt/p&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt/div&gt <br>
+                &lt/body&gt
+                </p>
+                หมายความว่า &ltp&gt ที่อยู่ใน &ltdiv&gt <br> 
+                จะมี style ตามที่กำหนด
+            </td>
+            <td class="d">
+                <p style="background-color: yellow;color: black;">
+                    Hello
+                </p>
+            </td>
+        </tr>
+        <tr class="d">
+            <td style="font-size: 30px;" class="d">Child Selector</td>
+            <td class="d">การกำหนด style element ลูก ด้วยเครื่องหมาย &gt <br>
+                จาก element แม่
+            </td>
+            <td class="d">
+                <p style="color:#BA4A00">
+                    &lthead&gt <br>
+                    &ltstyle&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: #1A5276;">
+                        &ltdiv&gt p
+                    </span> { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    background-color:yellow; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    } <br>
+                    &lt/style&gt <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltdiv&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltp&gtHello&lt/p&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt/div&gt <br>
+                    &lt/body&gt
+                </p>
+                หมายความว่า &ltp&gt ใน &ltdiv&gt <br>
+                จะมี style ตามที่กำหนด 
+            </td>
+            <td class="d">
+                <p style="background-color: yellow;">
+                    Hello
+                </p>
+            </td>
+        </tr>
+        <tr class="d">
+            <td style="font-size: 30px;" class="d">Adjacent Sibling Selector</td>
+            <td class="d">
+                กำหนด element ประเภทเดียวกับ element <br>
+                ภายใน elementแม่ ตัวแรกที่อยู่ติดกับ elementแม่ <br>
+                ให้แสดง style ที่กำหนด
+            </td>
+            <td style="color: #D4E6F1;" class="d">
+                &lthead&gt <br>
+                &ltstyle&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="color: white;">div + p</span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                background-color:yellow; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>
+                &lt/style&gt <br>
+                &lt/head&gt <br><br>
+                &ltbody&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltdiv&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltp&gtHello&lt/p&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt/div&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltp&gtHello&lt/p&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltp&gtHello&lt/p&gt <br>
+                &lt/body&gt
+            </td>
+            <td class="d">
+                <p style="color: black;">Hello</p>
+                <p style="background-color: yellow;color: black;">Hello</p>
+                <p style="color: black;">Hello</p>
+            </td>
+        </tr>
+        <tr class="d">
+            <td class="d">General Sibling Selector</td>
+            <td class="d">
+                กำหนด element ประเภทเดียวกับ element <br>
+                ภายใน element ที่เขียนขึ้นภายหลังจาก <br>
+                element แม่ทุกตัว ให้แสดง style ตามที่กำหนด
+            </td>
+            <td style="color: #BA4A00;" class="d">
+                &lthead&gt <br>
+                &ltstyle&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="color: 1A5276;">
+                    div ~ p
+                </span> {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                background-color:yellow; <br>
+                } <br>
+                &lt/style&gt <br>
+                &lt/head&gt <br><br>
+                &ltboady&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltdiv&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltp&gtHello&lt/p&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt/div&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltp&gtHello&lt/p&gt <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ltp&gtHello&lt/p&gt <br>
+                &lt/body&gt
+            </td>
+            <td class="d">
+                <p style="color: black;">Hello</p>
+                <p style="color: black;background-color: yellow;">Hello</p>
+                <p style="color: black;background-color: yellow;">Hello</p>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
