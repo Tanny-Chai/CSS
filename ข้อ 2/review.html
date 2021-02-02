@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review 2</title>
+    <style>
+        table.a {
+            border-collapse: collapse;
+            width: 95%;
+        }
+        td.a,th.a {
+            border: 1px solid #3498DB;
+            text-align: left;
+            padding: 8px;
+        }
+        th.a {
+            background-color: #A3E4D7;
+            font-size: 30px;
+        }
+        td.a {
+            font-size: 20px;
+        }
+        tr.a:nth-child(even) {
+            background-color: #EBF5FB ;
+        }
+        tr.a:nth-child(odd) {
+            background-color: #D6EAF8 ;
+        }
+
+        table.b {
+            border-collapse: collapse;
+            width: 95%;
+        }
+        td.b,th.b {
+            border: 1px solid #E74C3C;
+            text-align: left;
+            padding: 8px;
+        }
+        th.b {
+            background-color: #F5B7B1;
+            font-size: 30px;
+        }
+        td.b {
+            font-size: 20px;
+        }
+        tr.b:nth-child(even) {
+            background-color: #FADBD8;
+        }
+        tr.b:nth-child(odd) {
+            background-color: #FDEDEC ;
+        }
+
+        table.c {
+            border-collapse: collapse;
+            width: 95%;
+        }
+        td.c,th.c {
+            border: 1px solid #186A3B ;
+            text-align: left;
+            padding: 8px;
+        }
+        th.c {
+            background-color: #ABEBC6;
+            font-size: 30px;
+        }
+        td.c {
+            font-size: 20px;
+        }
+        tr.c:nth-child(even) {
+            background-color: #D5F5E3 ;
+        }
+        tr.c:nth-child(odd) {
+            background-color: #EAFAF1 ;
+        }
+    </style>
+</head>
+<body>
+    <h1>2.1 property และ value คืออะไรแตกต่างกันอย่างไร</h1>
+    <div style="display: flex;justify-content: center;">
+        <table class="a">
+            <tr class="a">
+                <th class="a">Type</th>
+                <th class="a">Description</th>
+            </tr>
+
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">Property</td>
+                <td class="a">
+                    คือ ส่วนของคุณสมบัติที่เราต้องการให้แสดง เช่น สีตัวอักษร
+                    ชนิดตัวอักษร ขนาดตัวอักษร
+                </td>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">Value</td>
+                <td class="a">
+                    คือ ค่าที่เราต้องการให้แสดง เช่น ตัวอักษรสีแดง
+                    ตัวอักษรแบบ Tahoma ตัวอักษรขนาด 12pt
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h1>2.2 property ที่สอนใน precamp มีกี่กลุ่มอะไรบ้าง</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ มี 5 กลุ่มดังนี้</h2>
+    <div style="display: flex;justify-content: center;">
+        <table class="b">
+            <tr class="b">
+                <th class="b">Group of Property</th>
+                <th class="b">Description</th>
+            </tr>
+            <tr class="b">
+                <td style="font-size: 30px;" class="b">
+                    Property for content
+                </td>
+                <td class="b">
+                    <ul>
+                        <li>color</li>
+                        <li>size</li>
+                        <li>font</li>
+                        <li>text</li>
+                        <li>list-style-type</li>
+                        <li>height</li>
+                        <li>width</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="b">
+                <td style="font-size: 30px;" class="b">
+                    Property for border
+                </td>
+                <td class="b">
+                    <ul>
+                        <li>border</li>
+                        <li>table</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="b">
+                <td style="font-size: 30px;" class="b">
+                    Property for padding
+                </td>
+                <td class="b">
+                       padding (top, right, bottom, left)
+                </td>
+            </tr>
+            <tr class="b">
+                <td style="font-size: 30px;" class="b">
+                    Property for margin
+                </td>
+                <td class="b">
+                    margin (top, right, bottom, left)
+                </td>
+            </tr>
+            <tr class="b">
+                <td style="font-size: 30px;" class="b">
+                    Property for element
+                </td>
+                <td class="b">
+                    <ul>
+                        <li>display</li>
+                        <li>height</li>
+                        <li>width</li>
+                        <li>position</li>
+                        <li>float</li>
+                        <li>align</li>
+                        <li>flex</li>
+                        <li>grid</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h1>2.3 value unit มีกี่ประเภทอะไรบ้างแต่ละ ประเภทคืออะไร</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ มี 2 ประเภทดังนี้</h2>
+    <div style="display: flex;justify-content: center;">
+        <table class="c">
+            <tr class="c">
+                <th class="c">Type</th>
+                <th class="c">Descripton</th>
+            </tr>
+            <tr class="c">
+                <td rowspan="6" style="font-size:30px" class="c">
+                Absolute Lengths
+                </td>
+                <td class="c">cm = centimeter</td>
+            </tr>
+            <tr class="c">
+                <td class="c">mm = millimeter</td>
+            </tr>
+            <tr class="c">
+                <td class="c">in = inches</td>
+            </tr>
+            <tr class="c">
+                <td class="c">px = pixel</td>
+            </tr>
+            <tr class="c">
+                <td class="c">pt = point</td>
+            </tr>
+            <tr class="c">
+                <td class="c">pc = picas</td>
+            </tr>
+            <tr class="c">
+                <td rowspan="9" 
+                style="font-size: 30px;background-color: #EAFAF1;" class="c">
+                    Relative Lengths
+                </td>
+                <td class="c">
+                    em = กำหนดระยะห่างระหว่างบรรทัด เช่น <br>
+                    2em จาก 16 px หมายถึง เว้นระยะห่างระหว่างบรรทัด 16x2 = 32px 
+                </td>
+            </tr>
+            <tr class="c">
+                <td class="c">ex = เพิ่มความสูงตามแนว x-height</td>
+            </tr>
+            <tr class="c">
+                <td class="c">ch = เพิ่ม/ลด ขนาดตัวอักษร เทียบกับ 0</td>
+            </tr>
+            <tr class="c">
+                <td class="c">
+                    rem = เพิ่ม/ลด ขนาดตัวอักษร โดยเทียบกับการถอดรากของสเกลเดิม <br>
+                    เช่น 2rem จาก 16px หมายถึง ลดขนาดตัวอักษรจาก 16px ให้มีขนาดเป็นรากที่สอง
+                    ของ 16 คือ 4px
+                </td>
+            </tr>
+            <tr class="c">
+                <td class="c">
+                    vw = เพิ่ม/ลด ขนาดตัวอักษรเทียบกับ % ความกว้างของ viewport นั้นๆ <br>
+                    ถ้ามีการเพิ่มหรือลด ขนาด viewport ตัวอักษรก็จะพูดเพิ่มหรือลดตามไปด้วย <br>
+                    เช่น 20vw หมายถึง ตัวอักษรนี้มีขนาด 20% เทียบกับความกว้างของ viewport ขณะแสดง
+                </td>
+            </tr>
+            <tr class="c">
+                <td class="c">
+                    vh = เพิ่ม/ลด ขนาดตัวอักษรเทียบกับ % ความสูงของ viewport นั้นๆ <br>
+                    ทำหน้าที่คล้ายๆ vw ต่างกันแค่จุดอ้างอิง <br>
+                    เช่น 20vh หมายถึง ตัวอักษรนี้มีขนาด 20% เทียบกับความสูงของ viewport ขณะแสดง
+                </td>
+            </tr>
+            <tr class="c">
+                <td class="c">
+                    vmin = เพิ่ม/ลด ขนาดตัวอักษรเทียบกับ % ความกว้างยาวของ viewport ที่มีขนาดเล็กที่สุด <br>
+                    หมายความว่า ถ้าขยาย viewport ให้ใหญ่กว่ามาตรฐาน ตัวอักษรจะไม่ขยายใหญ่ตาม <br>
+                    แตุ่ถ้าย่อให้เล็กกว่าขนาดมาตรฐาน ตัวอักษรจะย่อตาม
+                </td>
+            </tr>
+            <tr class="c">
+                <td class="c">
+                    vmax = เพิ่ม/ลด ขนาดตัวอักษรเทียบกับ % ความกว้างยาวของ viewport ที่มีขนาดใหญ่ที่สุด <br>
+                    หมายความว่า ถ้าย่อ viewport ให้เล็กกว่ามาตรฐาน ตัวอักษรจะไม่ย่อตาม ถ้าขยาย viewport <br>
+                    ตั้งแต่มาตรฐานขึ้นไปเรื่อยๆ ตัวอักษรจะถูกขยายตามไปเรื่อยๆ
+                </td>
+            </tr>
+            <tr class="c">
+                <td class="c">
+                    % = เพิ่มขนาดตัวอักษรเทียบ % จากสเกลเดิม <br> 
+                    หมายความว่า 100% หมายถึง ตัวอักษรขนาดเท่าเดิม <br>
+                    &gt100% หมายถึง ตัวอักษรถูกขยาย <br>
+                    &lt100% หมายถึง ตัวอักษรถูกย่อ
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
