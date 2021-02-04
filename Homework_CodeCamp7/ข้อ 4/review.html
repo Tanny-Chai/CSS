@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review 4</title>
+    <style>
+        table.a {
+            border-collapse: collapse;
+            width: 95%;
+        }
+        th.a,td.a {
+            border: 3px solid #880E4F;
+            text-align: left;
+            padding: 8px;
+        }
+        th.a {
+            font-size: 30px;
+            background-color: #F06292;
+        }
+        td.a {
+            font-size: 20px;
+        }
+        tr:nth-child(even) {
+            background-color: #F48FB1 ;
+        }
+        tr:nth-child(odd) {
+            background-color: #F8BBD0 ;
+        }
+
+        li.a {
+            display: inline;
+        }
+        span.a {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <h1>4.1 value ใน display property มีอะไรบ้าง</h1>
+    <div style="display: flex;justify-content: center;">
+        <table class="a">
+            <tr class="a">
+                <th class="a">Display Property</th>
+                <th class="a">Description</th>
+                <th class="a">Code Example</th>
+                <th class="a">Result</th>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">display:inline</td>
+                <td class="a">
+                    มักใช้ใน &ltli&gt โดยปกติการเขียน &ltli&gt ภายใน &ltul&gt หรือ &ltal&gt หลาย &ltli&gt <br>
+                    จะเรียงจากบนลงล่าง แต่ถ้าใช้ display:inline &ltli&gt จะเรียงจากซ้ายไปขวาแทน 
+                </td>
+                <td class="a">
+                    <span style="color: #6D4C41;">
+                    &lthead&gt <br>
+                    &ltstyle&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    li { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: red;">
+                        display:inline;
+                    </span> <br>
+                    } <br>
+                    &lt/style&gt <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltul&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltli&gtHTML&lt/li&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltli&gtCSS&lt/li&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &ltli&gtJavaScript&lt/li&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt/ul&gt <br>
+                    &lt/body&gt
+                    </span>
+                </td>
+                <td class="a">
+                    <ul>
+                        <li class="a">HTML</li>
+                        <li class="a">CSS</li>
+                        <li class="a">JavaScript</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">display:block</td>
+                <td class="a">
+                    ทำให้ element ที่เรียงต่อเนื่องในบรรทัดเดียวกันกลายเป็น block <br>
+                    เช่น &ltspan&gt ปกติ ถ้าอยู่คนละ &ltspan&gt จะอยู่ในบรรทัดเดียวกัน
+                    แต่ถ้าใช้ display:block จะอยู่คนละบรรทัดกัน
+                </td>
+                <td class="a">
+                    <span style="color: #1565C0 ;">
+                        &lthead&gt <br>
+                        &ltstyle&gt <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        span { <br>
+                        <span style="color: #0D47A1;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        display:block; 
+                        </span> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        } <br>
+                        &lt/style&gt <br>
+                        &lt/head&gt <br><br>
+                        &ltbody&gt <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &ltspan&gtabc&lt/span&gt <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &ltspan&gtdef&lt/span&gt <br>
+                        &lt/body&gt 
+                    </span>
+                </td>
+                <td class="a">
+                    <span class="a">abc</span>
+                    <span class="a">def</span>
+                </td>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">display:none</td>
+                <td class="a">ไม่แสดง elemet นั้นๆ เมื่อใส่ display:none</td>
+                <td class="a">
+                  <span style="color: #6D4C41;">
+                    &lthead&gt <br>
+                    &ltstyle&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    h1.hidden { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: red;">display:none;</span> <br>
+                    } <br>
+                    &lt/style&gt <br>
+                    &lt/head&gt <br><br>
+                    &ltbody&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lth1&gtAAA&lt/h1&gt <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lth1 <span style="color: red;">class="hidden"</span>&gt
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    BBB <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt/h1&gt <br>
+                    &lt/body&gt
+                  </span>  
+                </td>
+                <td class="a">
+                    <h1>AAA</h1>
+                    <h1 style="display: none;">BBB</h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
