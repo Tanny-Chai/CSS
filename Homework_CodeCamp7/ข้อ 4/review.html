@@ -21,10 +21,10 @@
         td.a {
             font-size: 20px;
         }
-        tr:nth-child(even) {
+        tr.a:nth-child(even) {
             background-color: #F48FB1 ;
         }
-        tr:nth-child(odd) {
+        tr.a:nth-child(odd) {
             background-color: #F8BBD0 ;
         }
 
@@ -33,6 +33,53 @@
         }
         span.a {
             display:block;
+        }
+
+        table.b {
+            border-collapse: collapse;
+            width: 95%;
+        }
+        th.b,td.b {
+            border: 3px solid #1C2833;
+            text-align: left;
+            padding: 8px;
+        }
+        th.b {
+            font-size: 30px;
+            background-color: #5D6D7E ;
+            color: white;
+        }
+        td.b {
+            font-size: 20px;
+        }
+        tr.b:nth-child(even) {
+            background-color: #AAB7B8;
+        }
+        tr.b:nth-child(odd) {
+            background-color: #E5E7E9;
+        }
+
+        table.c {
+            border-collapse: collapse;
+            width: 95%;
+        }
+        th.c,td.c {
+            border: 3px solid #6C3483 ;
+            text-align: left;
+            padding: 8px;
+        }
+        th.c {
+            font-size: 30px;
+            background-color: #D7BDE2;
+        }
+        td.c {
+            font-size: 20px;
+        }
+        tr.c:nth-child(even) {
+            background-color: #F5B7B1;
+        }
+        tr.c:nth-child(odd) {
+            background-color: #E6B0AA;
         }
     </style>
 </head>
@@ -149,6 +196,61 @@
                 <td class="a">
                     <h1>AAA</h1>
                     <h1 style="display: none;">BBB</h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h1>4.2 grid และ flex แตกต่างกันอย่างไร</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ flex และ grid มีหน้าที่หลักๆคล้ายกัน คือ การวาง layout บนหน้าเว็บ 
+    แต่จะมีข้อแตกต่างกันบางประการดังนี้</h2>
+    <div style="display: flex; justify-content: center;">
+        <table class="b">
+            <tr class="b">
+                <th class="b">Type</th>
+                <th class="b">Difference</th>
+            </tr>
+            <tr class="b">
+                <td style="font-size: 30px;" class="b">Flex</td>
+                <td class="b">
+                    สามารถยืดขยาย cell ได้ และปรับ layout ได้ทีละ 1 มิติ คือ ปรับ <br>
+                    row หรือ column ให้ยืดหรือหด อย่างใดอย่างหนึ่งเท่านั้น
+                </td>
+            </tr>
+            <tr class="b">
+                <td style="font-size: 30px;" class="b">Grid</td>
+                <td class="b">
+                    ไม่สามารถยืดขยาย cell ได้ ทำได้เพียงผสาน cell เพื่อให้มีขนาดใหญ่กว่า cell อื่น <br>
+                    เท่านั้น และสามารถปรับ layout ได้พร้อมกันทั้ง 2 มิติ คือ ปรับผสาน cell <br>
+                    ทั้ง row และ column ได้ในคราวเดียวกัน หรือ อย่างใดอย่างหนึ่งก็ได้
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h1>4.3 justify and align แตกต่างกันอย่างไร</h1>
+    <div style="display: flex; justify-content: center;">
+        <table class="c">
+            <tr class="c">
+                <th class="c">Type</th>
+                <th class="c">Difference</th>
+            </tr>
+            <tr class="c">
+                <td style="font-size: 30px;" class="c">
+                    Justify
+                </td>
+                <td class="c">
+                    ใช้จัดแนวตัวอักษรหรือวัตถุตามแนวนอน เช่น ปรับให้ตัวอักษรชิดขอบซ้าย ชิดขอบขวา หรือ อยู่กึ่งกลาง
+                    ระหว่างขอบซ้ายขอบขวา
+                </td>
+            </tr>
+            <tr class="c">
+                <td style="font-size: 30px;" class="c">
+                    Align
+                </td>
+                <td class="c">
+                    ใช้จัดแนวตัวอักษรหรือวัตถุตามแนวตั้ง เช่น ปรับให้ตัวอักษรชิดขอบบน ชิดขอบล่าง หรือ อยู่กึ่งกลาง
+                    ระหว่างขอบบนขอบล่าง
                 </td>
             </tr>
         </table>
