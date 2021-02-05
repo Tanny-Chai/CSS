@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review 5</title>
+    <style>
+        table.a {
+            border-collapse: collapse;
+            width: 95%;
+        }
+        td.a,th.a {
+            border: 3px solid #21618C;
+            padding: 8px;
+            text-align: left;
+        }
+        th.a {
+            font-size: 30px;
+            background-color: #3498DB;
+        }
+        td.a {
+            font-size: 20px;
+        }
+        tr.a:nth-child(even) {
+            background-color: #85C1E9;
+        }
+        tr.a:nth-child(odd) {
+            background-color: #D6EAF8;
+        }
+
+        div.table {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            position: absolute;
+            top: 750px;
+            left: 0px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1>5.1 position คืออะไร และ อะไรบ้าง</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ ใช้กำหนดตำแหน่งของ element ในแบบต่างๆ มีดังนี้</h2>
+    <div class="table">
+        <table class="a">
+            <tr class="a">
+                <th class="a">Position Property</th>
+                <th class="a">Description</th>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">Static</td>
+                <td class="a">กำหนด element ให้คงที่ ไม่สามารถเคลื่อนที่ไปไหนได้</td>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">Relative</td>
+                <td class="a">กำหนดตำแหน่ง element ได้ว่าจะให้มีระยะห่างจาก top,left,right,bottom เท่าไร</td>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">Fixed</td>
+                <td class="a">
+                    กำหนดำแหน่ง element ว่ามีระยะห่างจากจุดต่างๆ คล้ายๆ Relative <br>
+                    แต่กันตรงที่ว่า ไม่ว่าจะ scroll เมาส์ขึ้นหรือลง element จะถูก fixed ไม่เลื่อนขึ้นหรือลงตาม
+                </td>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">Absolute</td>
+                <td class="a">
+                    กำหนดตำแหน่ง element ว่าระยะห่างจาก top,left,right,bottom เท่าไร <br>
+                    โดยอิงจาก element ที่อยู่ใกล้กัน
+                </td>
+            </tr>
+            <tr class="a">
+                <td style="font-size: 30px;" class="a">Sticky</td>
+                <td class="a">
+                    ทำหน้าคล้าย Fixed และ Relative แต่ต่างจาก Fixed ตรงที่ว่า <br>
+                    element ไม่ได้ถูก fixed ตำแหน่งไว้ เพียงแต่ถ้า scroll เมาส์ ขึ้นหรือลง 
+                    จนสุดขอบ element ที่ถูก sticky จะเลื่อนตามขอบจอขึ้น/ลงตามมาด้วย
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h1>5.2 z-index คืออะไรใช้อย่างไร</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตอบ มักใช้กำหนด style ให้ภาพอยู่หลังตัวอักษร</h2>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวอย่าง</h2>
+    <div style="display: flex; justify-content: left;">
+        <img src="./img/htmlcssjs-details.png" alt="logo">
+        <br>
+        <p style="font-size: 30px; margin-top: 50px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            นี่คือรูปภาพที่ใช้ style เป็น z-index:-1
+        </p>
+    </div>
+</body>
+</html>
