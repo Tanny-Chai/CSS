@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        div.head {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: auto auto auto;
+
+            padding: 20px;
+        }
+
+        .grid-item1 {
+            background-color: #D98880;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .grid-item2 {
+            background-color: #F9E79F;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .grid-item3 {
+            background-color: #F5B7B1;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .grid-item4 {
+            background-color: #52BE80;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .grid-item5 {
+            background-color: #F5B041;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .grid-item5 {
+            background-color: #F5B041;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .grid-item6 {
+            background-color: #AED6F1;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        span {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 1280px) {
+            div.head {
+            text-align: center;
+            font-size: 55px;
+            margin-top: 50px;
+        }
+            .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: auto auto;
+            background-color: #FCF3CF;
+            padding: 20px;
+        }
+        .grid-item1 {
+            background-color: #D98880;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 25px;
+        }
+        .grid-item2 {
+            background-color: #F9E79F;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 25px;
+        }
+        .grid-item3 {
+            background-color: #F5B7B1;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 25px;
+        }
+        .grid-item4 {
+            background-color: #52BE80;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 25px;
+        }
+        .grid-item5 {
+            background-color: #F5B041;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 25px;
+        }
+        .grid-item5 {
+            background-color: #F5B041;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 25px;
+        }
+        .grid-item6 {
+            background-color: #AED6F1;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 25px;
+        }
+
+        span {
+            font-size: 35px;
+            font-weight: bold;
+        }  
+        }
+
+        @media screen and (max-width: 480px) {
+            div.head {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 50px;
+        }
+            .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: auto;
+            background-color: #FCF3CF;
+            padding: 20px;
+        }
+        .grid-item1 {
+            background-color: #D98880;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+        }
+        .grid-item2 {
+            background-color: #F9E79F;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+        }
+        .grid-item3 {
+            background-color: #F5B7B1;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+        }
+        .grid-item4 {
+            background-color: #52BE80;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+        }
+        .grid-item5 {
+            background-color: #F5B041;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+        }
+        .grid-item5 {
+            background-color: #F5B041;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+        }
+        .grid-item6 {
+            background-color: #AED6F1;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        span {
+            font-size: 40px;
+        }
+        }
+
+    </style>
+</head>
+<body style="background-color: #FCF3CF;">
+    <div style="display: flex; justify-content: center;">
+        <img style="width: 80%;" src="./img/jarit.jpg" alt="jarit">
+    </div>
+    <div class="head">จริต 6</div>
+    <div style="margin-top: 100px;" class="grid-container">
+        <div class="grid-item1">
+            <span>1.ราคจริต</span> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ท่านว่า เจ้าของจริตนี้มีอารมณ์หนักไปในทางรักสวยรักงาม
+            ชอบการมีระเบียบ สะอาด ประณีต มีกิริยาทางละมุนละไม นิ่มนวล ข้าวของเครื่องของใช้ไม่เกี่ยง
+            ว่าเก่าหรือใหม่ แต่ต้องสะอาด เรียบร้อย พูดจาอ่อนหวาน สรุปว่า มีนิสัยรักสวยรักงาม
+        </div>
+        <div class="grid-item2">
+            <span>2.โทสจริต</span> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ท่านว่า เจ้าของจริตนี้มีอารมณ์โกรธเป็นเจ้าเรือน ขี้โมโห
+            โทโส อะไรนิดก็โกรธ เป็นคนบูชาความโกรธว่าเป็นของวิเศษ พูดเสียงดัง ทำงานหยาบ ไม่ใคร่
+            ละเอียดถี่ถ้วน แต่งตัวไม่พิถีพิถัน เป็นคนใจเร็ว
+        </div>
+        <div class="grid-item3">
+            <span>3.โมหจริต</span> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ท่านว่า เจ้าของจริตนี้มีความลุ่มหลงในทรัพย์สมบัติ ชอบ
+            สะสมมากกว่ากระจายออก เป็นคนเก็บดะทุกอย่าง เห็นแก่ตัว อยากได้ของคนอื่น แต่ของตนไม่อยาก
+            ให้ใคร ชอบเอารัดเอาเปรียบชาวบ้าน ไม่ชอบบริจาคทานการกุศล เป็นคนชอบได้ ไม่ชอบให้
+        </div>
+        <div class="grid-item4">
+            <span>4.วิตกจริต</span> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ท่านว่า เจ้าของจริตนี้ เป็นคนชอบคิด ตัดสินใจไม่เด็ดขาด มีเรื่อง
+            ที่ต้องพิจารณานิดหน่อย ก็คิดตรองอยู่อย่างนั้น ไม่กล้าตัดสินใจ คนประเภทนี้เป็นโรคประสาทมาก หาความ
+            สบายใจได้ยาก
+        </div>
+        <div class="grid-item5">
+            <span>5.สัทธาจริต</span> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ท่านว่า เจ้าของจริตนี้มีจิตน้อมไปในความเชื่อเป็นอารมณ์ประจำใจ เชื่อ
+            โดยไร้เหตุผล พวกที่ถูกหลอกลวงก็คนประเภทนี้ มีใครแนะนำก็ตัดสินใจเชื่อโดยไม่พิจาณา
+        </div>
+        <div class="grid-item6">
+            <span>6.พุทธจริต</span> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ท่านว่า เจ้าของจริตนี้เป็นคนเจ้าปัญญาความคิด มีความฉลาดเฉลียว มี
+            ปฏิภาณไหว้พริบดี การคิดการอ่านหรือการทรงจำดีทุกอย่าง
+        </div>
+    </div>
+</body>
+</html>
